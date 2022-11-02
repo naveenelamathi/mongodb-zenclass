@@ -1,0 +1,105 @@
+
+   
+test> db.zen.insertOne({username:"Natarajan"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63620f9dcc7518b62f83a982")
+}
+test> db.zen.insertMany([{webcata:100},{codekata:100},{css:100}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63621103cc7518b62f83a983"),
+    '1': ObjectId("63621103cc7518b62f83a984"),
+    '2': ObjectId("63621103cc7518b62f83a985")
+  }
+}
+
+
+test> db.zen.insertOne({useratttendance:"95%"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63621182cc7518b62f83a986")
+
+
+
+test> db.zen.insertOne({topics:"javascript,Html,bootstrap,dom,reactjs,nodejs,mongodb,data algorithm,aws & system design"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6362139fcc7518b62f83a987")
+}
+test> db.zen.insertOne({companydrives:"TCS,WIPRO,HCL,AMAZON,PAYPAL,INFOSIS"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6362140dcc7518b62f83a988")
+}
+test> db.zen.insertOne([{mentors:"siva,raja,divya,mathan,vasnthan"}])
+{
+  acknowledged: true,
+  insertedId: ObjectId("6362149dcc7518b62f83a989")
+}
+test> db.zen.find({})
+[
+  
+  { _id: ObjectId("63620f9dcc7518b62f83a982"), username: 'Natarajan' },
+  { _id: ObjectId("63621103cc7518b62f83a983"), webcata: 100 },
+  { _id: ObjectId("63621103cc7518b62f83a984"), codekata: 100 },
+  { _id: ObjectId("63621103cc7518b62f83a985"), css: 100 },
+  { _id: ObjectId("63621182cc7518b62f83a986"), useratttendance: '95%' },
+  {
+    _id: ObjectId("6362139fcc7518b62f83a987"),
+    topics: 'javascript,Html,bootstrap,dom,reactjs,nodejs,mongodb,data algorithm,aws & system design'
+  },
+  {
+    _id: ObjectId("6362140dcc7518b62f83a988"),
+    companydrives: 'TCS,WIPRO,HCL,AMAZON,PAYPAL,INFOSIS'
+  },
+  {
+    '0': { mentors: 'siva,raja,divya,mathan,vasnthan' },
+    _id: ObjectId("6362149dcc7518b62f83a989")
+  }
+]
+test> db.zen.find({pretty})
+ReferenceError: pretty is not defined
+test> db.zen.find().pretty()
+[
+  
+  { _id: ObjectId("63620f9dcc7518b62f83a982"), username: 'Natarajan' },
+  { _id: ObjectId("63621103cc7518b62f83a983"), webcata: 100 },
+  { _id: ObjectId("63621103cc7518b62f83a984"), codekata: 100 },
+  { _id: ObjectId("63621103cc7518b62f83a985"), css: 100 },
+  { _id: ObjectId("63621182cc7518b62f83a986"), useratttendance: '95%' },
+  {
+    _id: ObjectId("6362139fcc7518b62f83a987"),
+    topics: 'javascript,Html,bootstrap,dom,reactjs,nodejs,mongodb,data algorithm,aws & system design'
+  },
+  {
+    _id: ObjectId("6362140dcc7518b62f83a988"),
+    companydrives: 'TCS,WIPRO,HCL,AMAZON,PAYPAL,INFOSIS'
+  },
+  {
+    '0': { mentors: 'siva,raja,divya,mathan,vasnthan' },
+    _id: ObjectId("6362149dcc7518b62f83a989")
+  }
+]
+test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
